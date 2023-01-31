@@ -8,8 +8,7 @@ DATASETS = ["covertype", "creditcard", "shuttle"]
 MODELS = ["AE", "DAE", "PW-AE"]
 N_TRIALS = 5
 CONFIGS = [{"latent_dim": i, "lr": 0.02} for i in np.arange(0.1, 2.1, 0.1)]
-# SUBSAMPLE = 50_000
-SUBSAMPLE = 50000
+SUBSAMPLE = 50_000
 SAVE_STR = "Capacity"
 
 
