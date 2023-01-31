@@ -1,11 +1,13 @@
 import pathlib
-import multiprocessing as mp
+# import multiprocessing as mp
+import multiprocess as mp
 
 from evaluate import test_then_train
 from evaluate import save_array
 
 DATASETS = ["shuttle", "creditcard", "covertype"]
-MODELS = ["AE-W", "AE", "DAE", "RRCF", "HST", "PW-AE", "xStream", "Kit-Net", "ILOF"]
+# MODELS = ["AE-W", "AE", "DAE", "RRCF", "HST", "PW-AE", "xStream", "Kit-Net", "ILOF"]
+MODELS = ["AE-W", "AE", "DAE", "HST", "PW-AE"]
 CONFIGS = {
     "AE-W": {"lr": 0.02, "latent_dim": 1.0, "dropout": 0},
     "AE": {"lr": 0.02, "latent_dim": 0.1, "dropout": 0},
@@ -14,6 +16,7 @@ CONFIGS = {
     "HST": {"n_trees": 25, "height": 15},
 }
 SUBSAMPLE = 20_000
+# SUBSAMPLE = 50000
 
 PATH = pathlib.Path(__file__).parent.parent.resolve()
 

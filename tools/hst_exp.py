@@ -1,6 +1,7 @@
 import pathlib
 import pandas as pd
-import multiprocessing as mp
+# import multiprocessing as mp
+import multiprocess as mp
 from evaluate import DATASETS, aggregate_dataframe, test_then_train, seed_everything
 
 N_TRIALS = 5

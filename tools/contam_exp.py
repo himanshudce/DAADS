@@ -12,7 +12,8 @@ DATASETS = {
     "creditcard": CreditCard,
     "shuttle": Shuttle,
 }
-SUBSAMPLE = 50_000
+# SUBSAMPLE = 50_000
+SUBSAMPLE = 50000
 ANOM_FRACTIONS = np.arange(0.005, 0.1005, 0.005)
 N_TRIALS = 5
 CONFIGS = {"HST": {}, "DAE": {"lr": 0.02}, "PW-AE": {"lr": 0.1}}

@@ -1,14 +1,18 @@
 import pandas as pd
-import multiprocessing as mp
+# import multiprocessing as mp
+import multiprocess as mp
 import pathlib
 
 from evaluate import aggregate_dataframe, test_then_train
 
-N_PROCESSES = 3
+# N_PROCESSES = 3
+N_PROCESSES = 10
 DATASETS = ["covertype", "creditcard", "shuttle"]
 MODELS = ["AE", "AE", "DAE", "RRCF", "HST", "PW-AE", "xStream", "Kit-Net", "ILOF"]
-SEEDS = range(42, 52)
-SUBSAMPLE = 500_000
+# SEEDS = range(42, 52)
+SEEDS = range(42, 44)
+# SUBSAMPLE = 500_000
+SUBSAMPLE = 50000
 SAVE_STR = "Benchmark"
 
 CONFIGS = {

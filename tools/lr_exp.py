@@ -1,16 +1,19 @@
 import pathlib
 from evaluate import test_then_train, aggregate_dataframe
-import multiprocessing as mp
+import multiprocess as mp
 import numpy as np
 import pandas as pd
 
 OPTIMIZER_FNS = ["hd-sgd", "adam", "sgd"]
 MODELS = ["AE", "PW-AE", "DAE"]
-SEEDS = range(42, 52)
+# SEEDS = range(42, 52)
+SEEDS = range(42, 44)
 LEARNING_RATES = np.geomspace(1e-3, 0.256, 9)
 DATASETS = ["covertype", "creditcard", "shuttle"]
+# SUBSAMPLE = 50000
 SUBSAMPLE = 50000
-N_PROCESSES = 50
+# N_PROCESSES = 50
+N_PROCESSES = 10
 SAVE_STR = "Learning Rate"
 
 pool = mp.Pool(processes=N_PROCESSES)
