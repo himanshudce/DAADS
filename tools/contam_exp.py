@@ -7,6 +7,8 @@ from river.datasets import CreditCard
 from evaluate import aggregate_dataframe, test_then_train
 from tools.benchmark_exp import SAVE_STR
 
+np.random.seed(42) #changed
+
 DATASETS = {
     "covertype": Covertype,
     "creditcard": CreditCard,
